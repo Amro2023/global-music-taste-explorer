@@ -9,7 +9,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]  # for scripts/ in repo root
 if REPO_ROOT.name == "Shiny_migration":
     REPO_ROOT = REPO_ROOT.parent
 
-EXPORTS = REPO_ROOT / "exports"
+HERE = Path(__file__).resolve().parents[1]  # Shiny_migration/
+EXPORTS = HERE / "exports"
 EXPORTS.mkdir(exist_ok=True)
 
 # --- Download Kaggle dataset ---
@@ -124,4 +125,4 @@ append_dedupe(
     subset_keys=["region", "year", "artist"],
 )
 
-print("✅ Backfill complete. Commit the updated exports/ parquet files to GitHub.")
+print("✅ Backfill complete. Exports generated locally (exports/ is gitignored).")
