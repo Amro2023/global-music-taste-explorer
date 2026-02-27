@@ -2,3 +2,7 @@
 __pycache__/
 *.pyc
 rsconnect-python/
+
+# Data outputs (generated)
+exports/
+Shiny_migration/exports/
