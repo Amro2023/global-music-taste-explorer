@@ -1,0 +1,9 @@
+.venv
+__pycache__/
+*.pyc
+.DS_Store
+.env
+source/
+rsconnect-python/
+exports_backup_2021_only/
+cache/
