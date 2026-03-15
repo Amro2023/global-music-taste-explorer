@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+source/
+rsconnect-python/
+exports_backup_2021_only/
+Shiny_migration/.venv/
+Shiny_migration/__pycache__/
+Shiny_migration/.DS_Store
+Shiny_migration/source/
+Shiny_migration/rsconnect-python/
+Shiny_migration/exports_backup_2021_only/
+Shiny_migration/cache/

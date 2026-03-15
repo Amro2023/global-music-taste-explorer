@@ -1,4 +1,5 @@
-.venv
+cat > .gitignore <<'EOF'
+.venv/
 __pycache__/
 *.pyc
 .DS_Store
@@ -7,3 +8,4 @@ source/
 rsconnect-python/
 exports_backup_2021_only/
 cache/
+EOF
