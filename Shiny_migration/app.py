@@ -301,6 +301,9 @@ def get_country_snapshot_rows(country, limit=10, genre=None):
 # UI
 # -------------------------
 app_ui = ui.page_fluid(
+    ui.tags.head(
+        ui.tags.meta(name="viewport", content="width=device-width, initial-scale=1")
+    ),
     ui.tags.style(
         """
         /* ===============================
@@ -441,7 +444,59 @@ app_ui = ui.page_fluid(
         .selectize-dropdown .active {
         background-color: #2a2a2a !important;
         color: #ffffff !important;
-        }       
+        }     
+
+        /* ===============================
+        MOBILE / API PAGE READABILITY
+        =============================== */
+
+        .section-title {
+        color: #ffffff !important;
+        }
+
+        .form-control,
+        .form-select,
+        .btn {
+        width: 100%;
+        max-width: 100%;
+        }
+
+        .btn,
+        button {
+        touch-action: manipulation;
+        }
+
+        .api-card {
+        background: #171717;
+        border-radius: 16px;
+        padding: 16px;
+        border: 1px solid rgba(255,255,255,0.08);
+        margin-bottom: 12px;
+        }
+
+        .api-card-label {
+        color: #9aa0a6;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        }
+
+        .api-card-value {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+        .section-title {
+            font-size: 1.2rem;
+            line-height: 1.25;
+        }
+
+        .api-card-value {
+            font-size: 1.3rem;
+        }
+        }  
         """
     ),
 
@@ -571,7 +626,7 @@ app_ui = ui.page_fluid(
                 ui.div("Live Spotify Search Snapshot", class_="section-title"),
                 ui.output_ui("api_snapshot_kpis"),
 
-                ui.h6(ui.output_text_verbatim("api_status")),
+                ui.div(ui.output_text("api_status"), style="margin-bottom:10px; color:#9aa0a6;"),
 
                 ui.div("Top Result", class_="section-title"),
                 ui.output_ui("api_top_track_card"),

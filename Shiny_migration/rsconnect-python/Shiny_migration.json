@@ -1,11 +1,11 @@
 {
     "https://api.shinyapps.io": {
         "server_url": "https://api.shinyapps.io",
-        "filename": "/Users/amroosman/Library/Application Support/Positron/User/globalStorage/ms-python.python/pycache/Users/amroosman/Shiny App /global-music-taste-explorer/Shiny_migration",
+        "filename": "/Users/amroosman/Shiny App /global-music-taste-explorer/Shiny_migration",
         "app_url": "https://amro2023.shinyapps.io/shiny_migration1/",
         "app_id": "16901327",
         "app_guid": null,
-        "title": "shiny_migration",
+        "title": "Shiny_migration",
         "app_mode": "python-shiny",
         "app_store_version": 1
     }
